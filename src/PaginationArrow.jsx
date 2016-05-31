@@ -21,6 +21,7 @@ const PaginationArrow = React.createClass({
   },
 
   render() {
+    console.log("Arrow render");
     let {disabled, direction, onTrigger, ...props} = this.props;
     let modifiers = {[direction]: true};
     let states = {disabled};
