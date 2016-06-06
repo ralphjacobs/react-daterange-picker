@@ -68,6 +68,12 @@ var CalendarMonth = _reactAddons2['default'].createClass({
     value: _utilsCustomPropTypes2['default'].momentOrMomentRange
   },
 
+  getDefaultProps: function() {
+    return {
+      'disableNavigation': true,
+    }
+  },
+
   renderDay: function renderDay(date, i) {
     var _props = this.props;
     var CalendarDate = _props.dateComponent;
@@ -175,7 +181,6 @@ var CalendarMonth = _reactAddons2['default'].createClass({
     var choices = years.map(this.renderYearChoice);
     var modifiers = { year: true };
 
-    console.log(this.props.disableNavigation);
     return _reactAddons2['default'].createElement(
       'span',
       { className: this.cx({ element: 'MonthHeaderLabel', modifiers: modifiers }) },

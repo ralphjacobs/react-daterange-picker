@@ -32,6 +32,12 @@ const CalendarMonth = React.createClass({
     value: CustomPropTypes.momentOrMomentRange,
   },
 
+  getDefaultProps: function() {
+    return {
+      'disableNavigation': true,
+    }
+  },
+
   renderDay(date, i) {
     let {dateComponent: CalendarDate, value, highlightedDate, highlightedRange, hideSelection, enabledRange, ...props} = this.props;
     let d = moment(date);
